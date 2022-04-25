@@ -1,0 +1,14 @@
+.slick-prev:before, .slick-next:before {
+
+    color: gray !important;
+    font-size: 3rem !important;
+}
+
+.activeFilm {
+    color: #333;
+    background-color: rgb(192, 182, 135);
+}
+
+.noneActiveFilm {
+    @apply bg-gray-100 text-gray-800
+}

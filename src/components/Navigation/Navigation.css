@@ -1,0 +1,17 @@
+.navigation_booking {
+    
+    transform: translateY(100%);
+    transition: all .7s ease-in-out;
+}
+
+.navigation_booking.active {
+    transform: translateY(0%);
+    transition: all .7s ease-in-out;
+}
+
+.activeClassPose {
+    color: rgb(192, 182, 135);
+}
+.activeClassPose:hover {
+    color: rgb(192, 182, 135);
+}

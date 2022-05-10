@@ -6,7 +6,7 @@ import { getChiTietPhongVe, datVeAction } from '../../redux/actions/QuanLiDatVeA
 import styles from './CheckOut.module.css'
 import { CloseOutlined, UserOutlined, CheckOutlined } from '@ant-design/icons'
 import './CheckOut.css'
-import { DAT_GHE } from '../../redux/actions/type/QuanLiDatVeType'
+import { DAT_GHE, RESET_GHE_DANG_DAT } from '../../redux/actions/type/QuanLiDatVeType'
 import { Tabs } from 'antd';
 import { layThongTinTaiKhoanAction } from '../../redux/actions/QuanLiNguoiDungAction'
 import moment from 'moment'
@@ -26,7 +26,18 @@ export default function CheckOut(props) {
     dispatch(getChiTietPhongVe(id))
     dispatch(layThongTinTaiKhoanAction())
     window.scrollTo(0, 0)
+    console.log('1')
   }, [])
+  const val = React.useRef();
+  React.useEffect(
+    () => {
+      val.current = props;
+      dispatch({
+        type:RESET_GHE_DANG_DAT
+      })
+    },
+    [props]
+  );
   const { thongTinPhim, danhSachGhe } = chiTietPhongVe
   const renderChoNgoi = () => {
     return danhSachGhe.map((ghe, index) => {

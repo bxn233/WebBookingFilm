@@ -1,7 +1,12 @@
 .slick-prev:before, .slick-next:before {
 
-    color: gray !important;
+    color: white !important;
     font-size: 3rem !important;
+    border-radius: 50% ;
+    padding: 0 !important;
+    display: none;
+    
+
 }
 
 .activeFilm {

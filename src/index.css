@@ -1,11 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body {
+	font-family: 'Nunito',Arial,sans-serif !important;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ant-tabs-ink-bar {
+  border-bottom: 4px solid rgb(185, 189, 195) !important;
+   position: absolute;
+   background: #000000;
+   pointer-events: none;
+}
+.ant-tabs-nav {
+  margin: 0 !important;
+}
+.ant-tabs-nav-wrap {
+  border-bottom: 2px solid rgb(209,213, 219);
+}
+code {
+  font-family: "Nunito", sans-serif;
+}
 
+.ant-tabs-tab {
+  margin: 0px 0px!important;
+  border: 2px solid transparent;
+}
+.ant-tabs-tab.ant-tabs-tab-active {
+  background-color: rgb(253,242, 248);
+  z-index: 50;
+ 
+}
 
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: rgb(192, 182, 135) !important; 
+}
 
-  .ant-tabs-tab {
-    color: rgb(192, 182, 135) !important;
-  }
-
-  .ant-spin-text { color: #999; }
+.ant-tabs-tabpane{
+  padding: 0 !important;
+}

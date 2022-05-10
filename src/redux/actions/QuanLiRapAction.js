@@ -27,20 +27,17 @@ export const getDanhSachRapAction = () => {
 export const getThongTinLichChieuPhim = (maPhim) => {
     return async dispatch => {
         try{
-            dispatch(displayLoadingAction)
             const result = await quanLiRapService.layThongTinLichChieuPhim(maPhim);
 
-            console.log('result',result.data.content);
+            console.log('detail',result.data.content);
             if(result.status === 200) {
                 dispatch({
                     type:SET_FILM_DETAIL,
                     filmDetail:result.data.content
                 })
             }
-            dispatch(hideLoadingAction)
             
         }catch(errors) {
-            dispatch(hideLoadingAction)
             console.log('errors',errors.response?.data)
         }
 

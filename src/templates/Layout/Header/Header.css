@@ -1,0 +1,14 @@
+.header__client {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    -webkit-transition: all 0.5s  linear;
+    -moz-transition: all 0.5s  linear;
+    -o-transition: all 0.5s  linear;
+    transition: all 0.5s ease-out;
+}
+
+
+.headerHover:hover {
+    color: rgb(192, 182, 135);
+}

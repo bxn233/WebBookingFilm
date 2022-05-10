@@ -11,7 +11,7 @@ const initialState = {
 const QuanLiPhimReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_DANH_SACH_PHIM:
-            state.danhSachPhim = action.data.filter(phim => phim.dangChieu === true)
+            state.danhSachPhim = action.data
             state.danhSachPhimDefault = action.data
             return { ...state }
         case SET_DANH_SACH_PHIM_DANG_CHIEU:

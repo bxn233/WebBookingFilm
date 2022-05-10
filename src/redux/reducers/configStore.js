@@ -5,7 +5,10 @@ import QuanLiRapReducer from './QuanLiRapReducer';
 import QuanLiNguoiDungReducer from './QuanLiNguoiDungReducer';
 import QuanLiDatVeReducer from './QuanLiDatVeReducer';
 import LoadingReducer from './LoadingReducer';
+import TrailerReducer from './TrailerReducer';
+import NavigationReducer from './NavigationReducer';
 import thunk from 'redux-thunk'
+import { useEffect } from 'react';
 
 
 
@@ -16,8 +19,11 @@ const rootReducer = combineReducers({
     QuanLiRapReducer,
     QuanLiNguoiDungReducer,
     QuanLiDatVeReducer,
-    LoadingReducer
+    LoadingReducer,
+    TrailerReducer,
+    NavigationReducer
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
 export default store
+
